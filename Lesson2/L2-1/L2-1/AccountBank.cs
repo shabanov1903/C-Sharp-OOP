@@ -37,5 +37,14 @@ namespace L2_1
             checkCounter++;
             check = checkCounter;
         }
+
+        public void UpBalance(decimal val)
+        {
+            balance += val;
+        }
+        public void DownBalance(decimal val)
+        {
+            if ((balance - val) > 0) balance -= val;
+        }
     }
 }
