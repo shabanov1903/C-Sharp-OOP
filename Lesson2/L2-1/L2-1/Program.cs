@@ -10,14 +10,9 @@ namespace L2_1
             IPrint printer = new ConsolePrinter();
 
             // Инициализация счета 1 в банке
-            AccountBank account1 = new();
-            account1.SetCheck();
-            account1.SetBalance(50000);
-            account1.SetCheckType(CheckType.Insured);
-            AccountBank account2 = new();
-            account2.SetCheck();
-            account2.SetBalance(88000);
-            account2.SetCheckType(CheckType.Correspondent);
+            AccountBank account1 = new(bal:50000, type:CheckType.Insured);
+            // Инициализация счета 2 в банке
+            AccountBank account2 = new(bal:88000, type: CheckType.Correspondent);
 
             // Печать данных
             printer.Print("Данные пользователя 1:");

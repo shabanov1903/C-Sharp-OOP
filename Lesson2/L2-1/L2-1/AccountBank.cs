@@ -13,8 +13,28 @@ namespace L2_1
         private decimal balance;
         private CheckType checkType;
 
+        public AccountBank()
+        {
+            SetCheck();
+        }
+        public AccountBank(CheckType type)
+        {
+            checkType = type;
+            SetCheck();
+        }
+        public AccountBank(decimal bal)
+        {
+            balance = bal;
+            SetCheck();
+        }
+        public AccountBank(CheckType type, decimal bal)
+        {
+            checkType = type;
+            balance = bal;
+            SetCheck();
+        }
         public long GetCheck() => check;
-        public void SetCheck()
+        private void SetCheck()
         {
             checkCounter++;
             check = checkCounter;
