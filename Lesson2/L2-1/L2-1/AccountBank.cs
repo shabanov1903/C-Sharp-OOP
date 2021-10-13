@@ -8,12 +8,17 @@ namespace L2_1
 {
     class AccountBank
     {
+        private static long checkCounter = 4000_0000_0000_0000;
         private long check;
         private decimal balance;
         private CheckType checkType;
 
         public long GetCheck() => check;
-        public void SetCheck(long value) => check = value;
+        public void SetCheck()
+        {
+            checkCounter++;
+            check = checkCounter;
+        }
         public decimal GetBalance() => balance;
         public void SetBalance(decimal value) => balance = value;
         public CheckType GetCheckType() => checkType;
