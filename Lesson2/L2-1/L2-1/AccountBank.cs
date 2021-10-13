@@ -9,39 +9,33 @@ namespace L2_1
     class AccountBank
     {
         private static long checkCounter = 4000_0000_0000_0000;
-        private long check;
-        private decimal balance;
-        private CheckType checkType;
+        public long check { get; }
+        public decimal balance { get; set; }
+        public CheckType checkType { get; set; }
 
         public AccountBank()
         {
-            SetCheck();
+            checkCounter++;
+            check = checkCounter;
         }
         public AccountBank(CheckType type)
         {
             checkType = type;
-            SetCheck();
+            checkCounter++;
+            check = checkCounter;
         }
         public AccountBank(decimal bal)
         {
             balance = bal;
-            SetCheck();
+            checkCounter++;
+            check = checkCounter;
         }
         public AccountBank(CheckType type, decimal bal)
         {
             checkType = type;
             balance = bal;
-            SetCheck();
-        }
-        public long GetCheck() => check;
-        private void SetCheck()
-        {
             checkCounter++;
             check = checkCounter;
         }
-        public decimal GetBalance() => balance;
-        public void SetBalance(decimal value) => balance = value;
-        public CheckType GetCheckType() => checkType;
-        public void SetCheckType(CheckType value) => checkType = value;
     }
 }

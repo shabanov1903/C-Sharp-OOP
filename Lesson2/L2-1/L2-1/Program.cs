@@ -16,14 +16,14 @@ namespace L2_1
 
             // Печать данных
             printer.Print("Данные пользователя 1:");
-            printer.Print(account1.GetCheck());
-            printer.Print(account1.GetBalance());
-            printer.Print(account1.GetCheckType());
+            printer.Print(account1.check);
+            printer.Print(account1.balance);
+            printer.Print(account1.checkType);
 
             printer.Print("Данные пользователя 2:");
-            printer.Print(account2.GetCheck());
-            printer.Print(account2.GetBalance());
-            printer.Print(account2.GetCheckType());
+            printer.Print(account2.check);
+            printer.Print(account2.balance);
+            printer.Print(account2.checkType);
         }
     }
 }
