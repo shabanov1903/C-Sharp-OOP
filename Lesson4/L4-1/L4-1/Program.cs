@@ -6,23 +6,26 @@ namespace L4_1
     {
         static void Main(string[] args)
         {
-            // Создание здания 1
-            var building1 = new Building();
-            building1.SetHeight(30.0f);
-            building1.SetFloors(10);
-            building1.SetApartaments(100);
-            building1.SetEntrances(2);
+            Creator.CreateBuild(30.0f, 10, 100, 2);
+            Creator.CreateBuild(40.0f, 12, 60, 6);
+            Creator.CreateBuild(70.0f, 18, 80, 3);
+            Creator.CreateBuild(90.0f, 26, 95, 8);
 
-            // Создание здания 2
-            var building2 = new Building();
-            building2.SetHeight(40.0f);
-            building2.SetFloors(12);
-            building2.SetApartaments(60);
-            building2.SetEntrances(3);
+            // Печать параметров всех созданных зданий
+            foreach (Building building in Creator.buildings)
+            {
+                BuildingsPrinter.Print(building);
+            }
 
-            // Печать параметров
-            BuildingsPrinter.Print(building1);
-            BuildingsPrinter.Print(building2);
+            // Удаление элемента с номером 2
+            Creator.RemoveAtNumber(2);
+
+            // Печать параметров созданных зданий
+            // Ожидание: удалился элемент 2
+            foreach (Building building in Creator.buildings)
+            {
+                BuildingsPrinter.Print(building);
+            }
         }
     }
 }
