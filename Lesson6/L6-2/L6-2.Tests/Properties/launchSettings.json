@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "L6-2.Tests": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false
+    }
+  }
+}
