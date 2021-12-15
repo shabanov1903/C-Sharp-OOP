@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace L7_1.Coding
 {
-    public class CoderB
+    public class CoderB : ICoder
     {
         public string Encode(string value)
         {
