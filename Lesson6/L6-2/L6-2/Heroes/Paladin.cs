@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using NLog;
+using L6_2.Heroes.Base;
+
+namespace L6_2.Heroes
+{
+    public class Paladin : Hero
+    {
+        public Paladin(int health, int damage, ILogger logger) : base (health, damage, logger)
+        {
+            Log("Creating Paladin");
+        }
+    }
+}
